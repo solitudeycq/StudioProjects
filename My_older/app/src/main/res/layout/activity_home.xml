@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="92dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Health Rate &amp; Blood Pressure"
+            android:id="@+id/textView7"
+            android:layout_gravity="center"
+            android:textColor="#4bd14d"
+            android:textSize="25dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.04">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="122dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Report List"
+            android:id="@+id/textView8"
+            android:layout_gravity="center_horizontal|top"
+            android:textSize="25dp"
+            android:textColor="#28318e" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="XXXX(Link Button )"
+            android:id="@+id/textView10"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal|bottom" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.12"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="XXXX(Link Button )"
+            android:id="@+id/textView9"
+            android:textAlignment="center"
+            android:layout_weight="3.03"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.30">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.17">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="AAAA"
+            android:id="@+id/textView16"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="XXXX(Link Button )"
+            android:id="@+id/textView11"
+            android:textAlignment="center"
+            android:layout_weight="2.30"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.22">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="XXXX(Link Button )"
+            android:id="@+id/textView12"
+            android:textAlignment="center"
+            android:layout_weight="5.03"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="131.93"></TableLayout>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView android:id="@+id/imageView3"
+                android:layout_column="9"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:layout_width="120dp"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageView4"
+                android:layout_column="10"
+                android:src="@android:drawable/ic_btn_speak_now" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageView5"
+                android:layout_column="31"
+                android:src="@android:drawable/ic_menu_manage" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="   you"
+                android:id="@+id/textView13"
+                android:layout_column="9"
+                android:textSize="25dp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="contact"
+                android:id="@+id/textView14"
+                android:layout_column="10"
+                android:textSize="25dp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="configure"
+                android:id="@+id/textView15"
+                android:layout_column="31"
+                android:textStyle="bold|italic"
+                android:textSize="25dp" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

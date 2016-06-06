@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.j.my_older.ConfigureActivity">
+
+    <View  android:layout_height="70dp" android:background="#FFFFFF"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:id="@+id/view">
+    </View>
+    <View  android:layout_height="140dp" android:background="#FFFFFF"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:id="@+id/view2">
+    </View>
+    <View  android:layout_height="210dp" android:background="#FFFFFF"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:id="@+id/view3">
+    </View>
+    <View  android:layout_height="280dp" android:background="#FFFFFF"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:id="@+id/view4">
+    </View>
+    <View  android:layout_height="350dp" android:background="#FFFFFF"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:id="@+id/view5">
+    </View>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Back  "
+        android:id="@+id/button4"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/imageView6"
+        android:src="@android:drawable/ic_menu_manage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/imageView7"
+        android:layout_alignBottom="@+id/view2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:drawable/ic_menu_manage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voice Setting"
+        android:id="@+id/textView17"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignStart="@+id/button4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:textSize="30dp"
+        android:layout_alignParentBottom="false"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Date Setting"
+        android:id="@+id/textView18"
+        android:textSize="30dp"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/view2"
+        android:layout_alignLeft="@+id/textView17"
+        android:layout_alignStart="@+id/textView17" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/imageView8"
+        android:src="@android:drawable/ic_menu_manage"
+        android:layout_alignBottom="@+id/view3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/imageView9"
+        android:src="@android:drawable/ic_menu_manage"
+        android:layout_below="@+id/view3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/imageView10"
+        android:src="@android:drawable/ic_menu_manage"
+        android:layout_below="@+id/imageView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Contactor "
+        android:id="@+id/textView19"
+        android:textSize="30dp"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/textView20"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="UI Setting"
+        android:id="@+id/textView20"
+        android:textSize="30dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/view3"
+        android:layout_alignLeft="@+id/textView19"
+        android:layout_alignStart="@+id/textView19" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Quit"
+        android:id="@+id/textView21"
+        android:textSize="30dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textView20"
+        android:layout_alignLeft="@+id/textView20"
+        android:layout_alignStart="@+id/textView20" />
+
+</RelativeLayout>
