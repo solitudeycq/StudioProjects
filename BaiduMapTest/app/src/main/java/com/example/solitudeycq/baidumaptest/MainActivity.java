@@ -12,9 +12,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SDKInitializer.initialize(getApplicationContext());
-        setContentView(R.layout.activity_main);
 
+        SDKInitializer.initialize(getApplicationContext());
+
+        setContentView(R.layout.activity_main);
         mapView = (MapView)findViewById(R.id.map_view);
     }
 
