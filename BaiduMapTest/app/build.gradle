@@ -3,10 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-    useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        applicationId "com.example.solitudeycq.locationtest"
+        applicationId "com.example.solitudeycq.baidumaptest"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
