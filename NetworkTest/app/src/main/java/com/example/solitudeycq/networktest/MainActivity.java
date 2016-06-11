@@ -9,12 +9,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -27,6 +32,7 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 
 import javax.xml.parsers.SAXParserFactory;
 
@@ -34,7 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = "MainActivity";
 
     public static final int SHOW_RESPONSE = 0;
-    public static final String ADDRESS_URL = "http://192.168.31.100:80/get_data.xml";
+    public static final String ADDRESS_URL_XML = "http://192.168.31.100:80/get_data.xml";
+    public static final String ADDRESS_URL_JSON = "http://192.168.31.100:80/get_data.json";
     String result = "";
     ContentHandler handlerSAX = new ContentHandler();
 
@@ -75,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 HttpURLConnection connection = null;
 
                 try {
-                    URL url = new URL(ADDRESS_URL);
+                    URL url = new URL(ADDRESS_URL_JSON);
                     connection = (HttpURLConnection)url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(8000);
@@ -112,13 +119,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 try {
                     HttpClient httpclient = new DefaultHttpClient();
-                    HttpGet httpGet = new HttpGet(ADDRESS_URL);
+                    HttpGet httpGet = new HttpGet(ADDRESS_URL_JSON);
                     HttpResponse httpResponse = httpclient.execute(httpGet);
                     if(httpResponse.getStatusLine().getStatusCode()==200){
                         HttpEntity entity = httpResponse.getEntity();
                         String response = EntityUtils.toString(entity,"utf-8");
-                        parseXMLWithPull(response);
-                        parseXMLWithSAX(response);
+                        //parseXMLWithPull(response);
+                        //parseXMLWithSAX(response);
+                        //parseJSONWithJSONObject(response);
+                        parseJSONWithGSON(response);
                         Message message = new Message();
                         message.what = SHOW_RESPONSE;
 
@@ -186,6 +195,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private void parseJSONWithJSONObject(String jsonData){
+        try {
+            JSONArray jsonArray = new JSONArray(jsonData);
+            for(int i = 0;i<jsonArray.length();i++){
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                String id = jsonObject.getString("id");
+                String name = jsonObject.getString("name");
+                String version = jsonObject.getString("version");
+                Log.d(TAG, "id is "+id);
+                Log.d(TAG, "name is "+name);
+                Log.d(TAG, "version is "+version);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void parseJSONWithGSON(String jsonData){
+        Gson gson = new Gson();
+        List<App> appList = gson.fromJson(jsonData,new TypeToken<List<App>>(){}.getType());
+        for(App app:appList){
+            Log.d(TAG, "id is "+app.getId());
+            Log.d(TAG, "name is "+app.getName());
+            Log.d(TAG, "version is "+app.getVersion());
         }
     }
 }
